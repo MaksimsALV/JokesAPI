@@ -18,6 +18,7 @@ public class JokesAPI {
                 .build(); //mandatory to execute request
         HttpResponse<String> response = client //this handles response
                 .send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.statusCode());
         System.out.println(response.body());
     }
 }
