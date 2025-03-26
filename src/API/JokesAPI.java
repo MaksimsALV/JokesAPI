@@ -1,4 +1,5 @@
 package API;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -7,7 +8,6 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 public class JokesAPI {
-
     public static void requestAPI() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient(); //client is needed to send request
         HttpRequest request = HttpRequest.newBuilder() //this handles request
