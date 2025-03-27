@@ -19,16 +19,15 @@ public class JokesAPI {
                 .build(); //mandatory to execute request
         HttpResponse<String> response = client //this handles response
                 .send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.statusCode());
-        System.out.println("Initial String response for debug: " + response.body());
-        System.out.print("\n");
-        JSONObject jokeResponse = new JSONObject(response.body());
+        //System.out.println(response.statusCode());
+        //System.out.println("Initial String response for debug: " + response.body());
+        //System.out.print("\n");
 
-        //gets <key> and returns its <value>.
-        System.out.println("ID: " + jokeResponse.get("id")); //key=id; value=whats inside the id (number)
-        System.out.println("Type: " + jokeResponse.get("type")); //key=type; value=whats inside the type (general)
-        System.out.println("Joke: " + jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
-        System.out.println("Punchline: " + jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
+        //gets <key> and returns its <value>
+        JSONObject jokeResponse = new JSONObject(response.body());
+        System.out.println("\n#" + jokeResponse.get("id")); //key=id; value=whats inside the id (number)
+        System.out.println(jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
+        System.out.println(jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
     }
 }
 
