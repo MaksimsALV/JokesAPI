@@ -1,9 +1,11 @@
 package data;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class DataConstructor {
-    ArrayList<String> data = new ArrayList<>();
+    public static ArrayList<JSONObject> data = new ArrayList<>();
     int ID;
     String joke;
     String punchline;

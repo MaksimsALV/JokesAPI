@@ -1,11 +1,15 @@
 package API;
 
+import data.DataConstructor;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+
+import data.DataConstructor;
 import org.json.JSONObject;
 
 public class JokesAPI {
@@ -28,6 +32,9 @@ public class JokesAPI {
         System.out.println("\n#" + jokeResponse.get("id")); //key=id; value=whats inside the id (number)
         System.out.println(jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
         System.out.println(jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
+
+        int jokeID = DataConstructor.data.size();
+        DataConstructor.data.add(jokeID, jokeResponse);
     }
 }
 
