@@ -8,9 +8,11 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.List;
 
-import data.DataConstructor;
 import org.json.JSONObject;
+
+import javax.xml.crypto.Data;
 
 public class JokesAPI {
     public static void requestAPI() throws IOException, InterruptedException {
@@ -33,8 +35,11 @@ public class JokesAPI {
         System.out.println(jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
         System.out.println(jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
 
-        int jokeID = DataConstructor.data.size();
-        DataConstructor.data.add(jokeID, jokeResponse);
+        int id = (int) jokeResponse.get("id");
+        String setup = jokeResponse.get("setup").toString();
+        //String punchline = jokeResponse.get("punchline").toString();
+        DataConstructor.jokes.put(id, setup);
+        System.out.println(DataConstructor.jokes);
     }
 }
 
