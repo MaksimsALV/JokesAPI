@@ -29,10 +29,9 @@ public class JokesAPI {
 
         //using JSONObject library for data organization (key & value)
         JSONObject jokeResponse = new JSONObject(response.body());
-        int id = (int) jokeResponse.get("id");
         String joke = jokeResponse.get("setup").toString();
         String punchline = jokeResponse.get("punchline").toString();
-        return "#" + id + "\n" + joke + "\n" + punchline;
+        return joke + "\n" + punchline;
     }
 }
 
