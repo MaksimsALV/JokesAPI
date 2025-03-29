@@ -22,8 +22,9 @@ public class Controller1 {
 
     @FXML
     private Button btnViewSavedJokes;
-        public void btnViewSavedJokes() {
-
+        public void openStage2() {
+            Run.stage2.show();
+            Run.stage1.close();
         }
 
     @FXML

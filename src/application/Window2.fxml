@@ -38,7 +38,6 @@
                         <Button layoutX="75.0" layoutY="378.0" mnemonicParsing="false" text="Update" />
                         <Slider layoutX="194.0" layoutY="420.0" majorTickUnit="1.0" max="5.0" minorTickCount="1" prefHeight="38.0" prefWidth="302.0" showTickLabels="true" showTickMarks="true" />
                         <Text layoutX="194.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
-                        <Button layoutX="634.0" layoutY="446.0" mnemonicParsing="false" text="Return" />
                      </children>
                   </AnchorPane>
             </content>
@@ -64,5 +63,6 @@
           </Tab>
         </tabs>
       </TabPane>
+      <Button fx:id="btnReturn" layoutX="814.0" layoutY="544.0" mnemonicParsing="false" onAction="#openStage1" text="Return" />
    </children>
 </AnchorPane>
