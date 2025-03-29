@@ -10,7 +10,7 @@ import java.time.Duration;
 import org.json.JSONObject;
 
 public class JokesAPI {
-    public static void requestAPI() throws IOException, InterruptedException {
+    public static String requestAPI() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient(); //client is needed to send request
         HttpRequest request = HttpRequest.newBuilder() //this handles request
                 .uri(URI.create("https://official-joke-api.appspot.com/random_joke")) //endpoint
@@ -26,9 +26,10 @@ public class JokesAPI {
 
         //gets <key> and returns its <value>
         JSONObject jokeResponse = new JSONObject(response.body());
-        System.out.println("\n#" + jokeResponse.get("id")); //key=id; value=whats inside the id (number)
-        System.out.println(jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
-        System.out.println(jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
+        String id = jokeResponse.getString("id");
+        String joke = jokeResponse.getString("joke");
+        String punchline = jokeResponse.getString("punchline");
+        return "#" + id + "\n" + joke + "\n" + punchline;
     }
 }
 
