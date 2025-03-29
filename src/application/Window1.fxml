@@ -8,7 +8,7 @@
    <children>
       <Button fx:id="btnGetJoke" layoutX="9.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnGetJoke" text="Get Joke" />
       <TextArea fx:id="fieldJoke" editable="false" layoutX="9.0" layoutY="14.0" prefHeight="101.0" prefWidth="327.0" />
-      <Button fx:id="btnSave" layoutX="132.0" layoutY="121.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="btnSave" layoutX="132.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnSave" text="Save" />
       <Button fx:id="btnViewSavedJokes" layoutX="227.0" layoutY="121.0" mnemonicParsing="false" onAction="#openStage2" text="View Saved Jokes" />
    </children>
 </AnchorPane>

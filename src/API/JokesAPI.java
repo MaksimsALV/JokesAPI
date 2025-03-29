@@ -7,6 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
+import application.Joke;
 import org.json.JSONObject;
 
 public class JokesAPI {
@@ -34,4 +35,5 @@ public class JokesAPI {
         return joke + "\n" + punchline;
     }
 }
+
 
