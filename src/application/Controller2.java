@@ -49,13 +49,13 @@ public class Controller2 {
 
     public void initialize() {
         clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
-        clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
+        //clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         //clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
         populate();
     }
 
     public void populate() {
-        Joke joke1 = new Joke("Knock, Knock", "Its me, your life worst decision.");
+        Joke joke1 = new Joke("Knock, Knock");
 
         listOfJokes.add(joke1);
         tableOfJokes.setItems(listOfJokes);

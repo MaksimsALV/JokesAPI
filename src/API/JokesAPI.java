@@ -31,8 +31,8 @@ public class JokesAPI {
         //using JSONObject library for data organization (key & value)
         JSONObject jokeResponse = new JSONObject(response.body());
         String joke = jokeResponse.get("setup").toString();
-        String punchline = jokeResponse.get("punchline").toString();
-        return joke + "\n" + punchline;
+        //String punchline = jokeResponse.get("punchline").toString();
+        return joke; // + "\n" + punchline;
     }
 }
 
