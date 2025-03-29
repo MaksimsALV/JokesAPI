@@ -13,8 +13,7 @@ public class Controller1 {
     @FXML
     private Button btnGetJoke;
         public void btnGetJoke() throws IOException, InterruptedException {
-            String joke = JokesAPI.requestAPI();
-            fieldJoke.setText(joke);
+            fieldJoke.setText(JokesAPI.requestAPI());
         }
 
 
