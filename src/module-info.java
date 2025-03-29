@@ -3,6 +3,8 @@ module JokesAPI {
     requires javafx.fxml;
     requires java.net.http;
     requires org.json;
+    requires javafx.base;
 
-    opens application to javafx.fxml;
+    exports application;
+    opens application to javafx.fxml, javafx.base;
 }

@@ -22,6 +22,9 @@ public class Controller1 {
 
     @FXML
     private Button btnViewSavedJokes;
+        public void btnViewSavedJokes() {
+
+        }
 
     @FXML
     private TextArea fieldJoke;
