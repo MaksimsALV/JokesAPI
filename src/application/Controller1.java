@@ -8,7 +8,7 @@ import javafx.scene.control.TextArea;
 import java.io.IOException;
 
 
-public class Controller {
+public class Controller1 {
 
     @FXML
     private Button btnGetJoke;
