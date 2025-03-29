@@ -2,7 +2,9 @@ package application;
 
 import API.JokesAPI;
 import javafx.fxml.FXML;
-import java.awt.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+
 import java.io.IOException;
 
 
@@ -10,7 +12,7 @@ public class Controller {
 
     @FXML
     private Button btnGetJoke;
-        public void btnGetJoke(Button btnGetJoke) throws IOException, InterruptedException {
+        public void btnGetJoke() throws IOException, InterruptedException {
             String joke = JokesAPI.requestAPI();
             fieldJoke.setText(joke);
         }

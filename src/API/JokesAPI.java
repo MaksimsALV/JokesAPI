@@ -26,9 +26,9 @@ public class JokesAPI {
 
         //gets <key> and returns its <value>
         JSONObject jokeResponse = new JSONObject(response.body());
-        String id = jokeResponse.getString("id");
-        String joke = jokeResponse.getString("joke");
-        String punchline = jokeResponse.getString("punchline");
+        String id = String.valueOf(jokeResponse.get("id"));
+        String joke = String.valueOf(jokeResponse.get("setup"));
+        String punchline = String.valueOf(jokeResponse.get("punchline"));
         return "#" + id + "\n" + joke + "\n" + punchline;
     }
 }
