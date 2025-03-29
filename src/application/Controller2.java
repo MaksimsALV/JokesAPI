@@ -40,7 +40,7 @@ public class Controller2 {
     @FXML
     private Button btnReturn;
 
-    ObservableList<Joke> listOfJokes = FXCollections.observableArrayList();
+    static ObservableList<Joke> listOfJokes = FXCollections.observableArrayList();
 
     public void openStage1() {
         Run.stage1.show();
@@ -51,14 +51,13 @@ public class Controller2 {
         clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
         //clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         //clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
-        populate();
+        tableOfJokes.setItems(listOfJokes);
+
+
     }
 
-    public void populate() {
-        Joke joke1 = new Joke("Knock, Knock");
-
-        listOfJokes.add(joke1);
-        tableOfJokes.setItems(listOfJokes);
+    public static void addJoke(Joke joke) {
+        listOfJokes.add(joke);
     }
 
 }

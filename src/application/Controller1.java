@@ -23,13 +23,16 @@ public class Controller1 {
     @FXML
     private TextArea fieldJoke;
 
+    private Joke visibleJoke;
 
     public void btnGetJoke() throws IOException, InterruptedException {
-        fieldJoke.setText(JokesAPI.requestAPI());
+        visibleJoke = JokesAPI.requestAPI();
+        fieldJoke.setText(visibleJoke.getJoke());
     }
 
     //initialize writing to the table
     public void btnSave() {
+        Controller2.addJoke(visibleJoke);
     }
 
     public void openStage2() {

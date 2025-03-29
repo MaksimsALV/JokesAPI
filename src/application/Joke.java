@@ -1,4 +1,5 @@
 package application;
+import API.JokesAPI;
 
 public class Joke {
     //private String id; //todo uuid
