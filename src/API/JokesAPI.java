@@ -1,18 +1,13 @@
 package API;
 
-import data.DataConstructor;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
-import java.util.List;
 
 import org.json.JSONObject;
-
-import javax.xml.crypto.Data;
 
 public class JokesAPI {
     public static void requestAPI() throws IOException, InterruptedException {
@@ -34,12 +29,6 @@ public class JokesAPI {
         System.out.println("\n#" + jokeResponse.get("id")); //key=id; value=whats inside the id (number)
         System.out.println(jokeResponse.get("setup")); //key=setup; value=whats inside the setup (joke)
         System.out.println(jokeResponse.get("punchline")); //key=punchline; value=whats inside the punchline (punchline!)
-
-        int id = (int) jokeResponse.get("id");
-        String setup = jokeResponse.get("setup").toString();
-        //String punchline = jokeResponse.get("punchline").toString();
-        DataConstructor.jokes.put(id, setup);
-        System.out.println(DataConstructor.jokes);
     }
 }
 
