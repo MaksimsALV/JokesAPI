@@ -1,13 +1,11 @@
 package application;
 
-import API.JokesAPI;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Controller2 {
@@ -56,7 +54,7 @@ public class Controller2 {
 
     }
 
-    public static void addJoke(Joke joke) {
+    public static void addJoke(Joke joke, String category) {
         listOfJokes.add(joke);
     }
 

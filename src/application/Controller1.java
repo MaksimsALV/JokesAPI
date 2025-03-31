@@ -32,7 +32,7 @@ public class Controller1 {
 
     //initialize writing to the table
     public void btnSave() {
-        Controller2.addJoke(visibleJoke + getCategory());
+        Controller2.addJoke(visibleJoke, Joke.getCategory());
 
     }
 
