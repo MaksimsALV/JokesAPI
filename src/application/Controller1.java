@@ -28,6 +28,7 @@ public class Controller1 {
     public void btnGetJoke() throws IOException, InterruptedException {
         visibleJoke = JokesAPI.requestAPI();
         fieldJoke.setText(visibleJoke.getJoke());
+        //fieldJoke.setText(visibleJoke.getPunchline());
     }
 
     //initialize writing to the table

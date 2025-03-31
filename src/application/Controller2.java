@@ -49,7 +49,7 @@ public class Controller2 {
 
     public void initialize() {
         clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
-        //clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
+        clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         //clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
         tableOfJokes.setItems(listOfJokes);
 
