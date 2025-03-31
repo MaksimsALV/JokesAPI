@@ -24,6 +24,7 @@ public class Controller1 {
     private TextArea fieldJoke;
 
     private Joke visibleJoke;
+    private String jokeCategory = Joke.getCategory();
 
     public void btnGetJoke() throws IOException, InterruptedException {
         visibleJoke = JokesAPI.requestAPI();
@@ -32,7 +33,7 @@ public class Controller1 {
 
     //initialize writing to the table
     public void btnSave() {
-        Controller2.addJoke(visibleJoke, Joke.getCategory());
+        Controller2.addJoke(visibleJoke, jokeCategory);
 
     }
 
