@@ -31,7 +31,7 @@ public class Controller2 {
     private TableColumn<Joke, String> clmnRating; //todo change to integer
 
     @FXML
-    private TableColumn<Joke, Instant> clmnDate_created; //todo change to timestamp
+    private TableColumn<Joke, String> clmnDate_created; //todo change to timestamp
 
     @FXML
     private TableColumn<Joke, String> clmnDate_updated; //todo change to timestamp
@@ -51,7 +51,7 @@ public class Controller2 {
         clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
         clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
-        clmnDate_created.setCellValueFactory(new PropertyValueFactory<Joke, Instant>("date_created"));
+        clmnDate_created.setCellValueFactory(new PropertyValueFactory<Joke, String>("date_created"));
         tableOfJokes.setItems(listOfJokes);
     }
 
