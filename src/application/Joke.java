@@ -2,7 +2,6 @@ package application;
 import API.JokesAPI;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant; //javas timestamps
 import java.util.Date; //javas timestamps
 
 public class Joke {
@@ -12,15 +11,15 @@ public class Joke {
     private String category;
     //private String rating; //todo change to integer
     private String date_created;
-    private String date_updated; //todo change to timestamp
+    private String date_updated;
 
 
     public Joke(String joke, String punchline, String category) {
         this.joke = joke;
         this.punchline = punchline;
         this.category = category;
-        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.ms").format(new Date());
-        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.ms").format(new Date());
+        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
     public String getJoke() {
         return joke;
