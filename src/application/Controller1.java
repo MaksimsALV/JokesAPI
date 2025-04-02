@@ -23,7 +23,7 @@ public class Controller1 {
     @FXML
     private TextArea fieldJoke;
 
-    private Joke visibleJoke;
+    private Joke visibleJoke; //need this to return "visible joke" in UI and then pass that result to btnSave() method..
 
     public void btnGetJoke() throws IOException, InterruptedException {
         visibleJoke = JokesAPI.requestAPI();
