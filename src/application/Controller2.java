@@ -52,6 +52,7 @@ public class Controller2 {
         clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
         clmnDate_created.setCellValueFactory(new PropertyValueFactory<Joke, String>("date_created"));
+        clmnDate_updated.setCellValueFactory(new PropertyValueFactory<Joke, String>("date_updated"));
         tableOfJokes.setItems(listOfJokes);
     }
 

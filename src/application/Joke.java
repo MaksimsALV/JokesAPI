@@ -12,7 +12,7 @@ public class Joke {
     private String category;
     //private String rating; //todo change to integer
     private String date_created;
-    //private String date_updated; //todo change to timestamp
+    private String date_updated; //todo change to timestamp
 
 
     public Joke(String joke, String punchline, String category) {
@@ -20,6 +20,7 @@ public class Joke {
         this.punchline = punchline;
         this.category = category;
         this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.ms").format(new Date());
+        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.ms").format(new Date());
     }
     public String getJoke() {
         return joke;
@@ -32,6 +33,9 @@ public class Joke {
     }
     public String getDate_created() {
         return date_created;
+    }
+    public String getDate_updated() {
+        return date_updated;
     }
 }
 
