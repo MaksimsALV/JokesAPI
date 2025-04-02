@@ -49,11 +49,11 @@ public class Controller2 {
 
     public void initialize() { //FXMLLoader automatically calls this method when launching 2nd scene
         clmnId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
-        clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
-        clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
-        clmnDate_created.setCellValueFactory(new PropertyValueFactory<Joke, String>("date_created"));
-        clmnDate_updated.setCellValueFactory(new PropertyValueFactory<Joke, String>("date_updated"));
+        clmnJoke.setCellValueFactory(new PropertyValueFactory<>("joke"));
+        clmnPunchline.setCellValueFactory(new PropertyValueFactory<>("punchline"));
+        clmnCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
+        clmnDate_created.setCellValueFactory(new PropertyValueFactory<>("date_created"));
+        clmnDate_updated.setCellValueFactory(new PropertyValueFactory<>("date_updated"));
         tableOfJokes.setItems(listOfJokes);
     }
 
