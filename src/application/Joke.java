@@ -3,9 +3,10 @@ import API.JokesAPI;
 
 import java.text.SimpleDateFormat;
 import java.util.Date; //javas timestamps
+import java.util.UUID;
 
 public class Joke {
-    //private String id; //todo uuid
+    private UUID id;
     private String joke;
     private String punchline;
     private String category;
@@ -15,11 +16,15 @@ public class Joke {
 
 
     public Joke(String joke, String punchline, String category) {
+        this.id = UUID.randomUUID();
         this.joke = joke;
         this.punchline = punchline;
         this.category = category;
         this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
         this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    }
+    public UUID getId() {
+        return id;
     }
     public String getJoke() {
         return joke;

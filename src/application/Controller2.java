@@ -48,6 +48,7 @@ public class Controller2 {
     }
 
     public void initialize() { //FXMLLoader automatically calls this method when launching 2nd scene
+        clmnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         clmnJoke.setCellValueFactory(new PropertyValueFactory<Joke, String>("joke"));
         clmnPunchline.setCellValueFactory(new PropertyValueFactory<Joke, String>("punchline"));
         clmnCategory.setCellValueFactory(new PropertyValueFactory<Joke, String>("category"));
