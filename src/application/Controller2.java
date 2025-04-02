@@ -54,7 +54,7 @@ public class Controller2 {
 
     }
 
-    public static void addJoke(Joke joke, String category) {
+    public static void addJoke(Joke joke) {
         listOfJokes.add(joke);
     }
 
