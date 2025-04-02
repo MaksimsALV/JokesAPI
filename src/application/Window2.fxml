@@ -10,34 +10,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller2">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller2">
    <children>
-      <TabPane layoutX="72.0" layoutY="52.0" prefHeight="504.0" prefWidth="689.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="31.0" layoutY="52.0" prefHeight="562.0" prefWidth="1211.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Saved Jokes">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="689.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="515.0" prefWidth="1211.0">
                      <children>
-                        <TableView fx:id="tableOfJokes" layoutX="-3.0" prefHeight="282.0" prefWidth="689.0">
+                        <TableView fx:id="tableOfJokes" layoutX="-3.0" prefHeight="295.0" prefWidth="1211.0">
                           <columns>
-                            <TableColumn fx:id="clmnId" prefWidth="75.0" text="id" />
-                            <TableColumn fx:id="clmnJoke" prefWidth="75.0" text="joke" />
-                              <TableColumn fx:id="clmnPunchline" prefWidth="75.0" text="punchline" />
-                              <TableColumn fx:id="clmnCategory" prefWidth="75.0" text="category" />
-                              <TableColumn fx:id="clmnRating" prefWidth="75.0" text="rating" />
-                              <TableColumn fx:id="clmnDate_created" prefWidth="113.0" text="date_created" />
-                              <TableColumn fx:id="clmnDate_updated" prefWidth="94.0" text="date_updated" />
+                            <TableColumn fx:id="clmnId" prefWidth="241.0" text="id" />
+                            <TableColumn fx:id="clmnJoke" minWidth="0.0" prefWidth="282.0" text="joke" />
+                              <TableColumn fx:id="clmnPunchline" prefWidth="242.0" text="punchline" />
+                              <TableColumn fx:id="clmnCategory" prefWidth="67.0" text="category" />
+                              <TableColumn fx:id="clmnRating" prefWidth="54.0" text="rating" />
+                              <TableColumn fx:id="clmnDate_created" prefWidth="178.0" text="date_created" />
+                              <TableColumn fx:id="clmnDate_updated" prefWidth="146.0" text="date_updated" />
                           </columns>
                         </TableView>
-                        <Button layoutX="83.0" layoutY="315.0" mnemonicParsing="false" text="Add" />
-                        <Button layoutX="624.0" layoutY="288.0" mnemonicParsing="false" text="Delete" />
-                        <TextField layoutX="190.0" layoutY="288.0" prefHeight="25.0" prefWidth="304.0" promptText="joke" />
-                        <TextField layoutX="190.0" layoutY="327.0" prefHeight="25.0" prefWidth="304.0" promptText="punchline" />
-                        <TextField layoutX="193.0" layoutY="365.0" prefHeight="25.0" prefWidth="303.0" promptText="category" />
-                        <Button layoutX="75.0" layoutY="378.0" mnemonicParsing="false" text="Update" />
-                        <Slider layoutX="194.0" layoutY="420.0" majorTickUnit="1.0" max="5.0" minorTickCount="1" prefHeight="38.0" prefWidth="302.0" showTickLabels="true" showTickMarks="true" />
-                        <Text layoutX="194.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
+                        <Button layoutX="226.0" layoutY="316.0" mnemonicParsing="false" text="Add" />
+                        <Button layoutX="1146.0" layoutY="303.0" mnemonicParsing="false" text="Delete" />
+                        <TextField layoutX="408.0" layoutY="303.0" prefHeight="25.0" prefWidth="396.0" promptText="joke" />
+                        <TextField layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
+                        <TextField layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
+                        <Button layoutX="226.0" layoutY="378.0" mnemonicParsing="false" text="Update" />
+                        <Slider layoutX="410.0" layoutY="446.0" majorTickUnit="1.0" max="5.0" minorTickCount="1" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" />
+                        <Text layoutX="410.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
                      </children>
                   </AnchorPane>
             </content>
@@ -63,6 +62,6 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button fx:id="btnReturn" layoutX="814.0" layoutY="544.0" mnemonicParsing="false" onAction="#openStage1" text="Return" />
+      <Button fx:id="btnReturn" layoutX="1189.0" layoutY="668.0" mnemonicParsing="false" onAction="#openStage1" text="Return" />
    </children>
 </AnchorPane>
