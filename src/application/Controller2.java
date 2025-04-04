@@ -90,7 +90,7 @@ public class Controller2 {
 
     public void btnRateJoke() {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
-        String slider = String.format("%.0f", sliderRating.getValue());
+        String slider = String.format("%.0f", sliderRating.getValue()); //I tried integers and failed, so i went with Strings, and then just trimming values to one number
         selectedJoke.setRating(slider);
         tableOfJokes.refresh();
     }
