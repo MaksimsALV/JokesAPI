@@ -41,6 +41,9 @@ public class Controller2 {
     private Button btnRateJoke;
 
     @FXML
+    private Button btnUpdateJoke;
+
+    @FXML
     private TextField fldCategory;
 
     @FXML
@@ -92,6 +95,14 @@ public class Controller2 {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
         String slider = String.format("%.0f", sliderRating.getValue()); //I tried integers and failed, so i went with Strings, and then just trimming values to one number
         selectedJoke.setRating(slider);
+        tableOfJokes.refresh();
+    }
+
+    public void btnUpdateJoke() {
+        Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
+        selectedJoke.setJoke(fldJoke.getText());
+        selectedJoke.setPunchline(fldPunchline.getText());
+        selectedJoke.setCategory(fldCategory.getText());
         tableOfJokes.refresh();
     }
 }
