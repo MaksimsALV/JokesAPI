@@ -95,6 +95,7 @@ public class Controller2 {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
         String slider = String.format("%.0f", sliderRating.getValue()); //I tried integers and failed, so i went with Strings, and then just trimming values to one number
         selectedJoke.setRating(slider);
+        selectedJoke.setDate_updated(); //updating date_updated everytime we rate
         tableOfJokes.refresh();
     }
 
@@ -103,6 +104,7 @@ public class Controller2 {
         selectedJoke.setJoke(fldJoke.getText());
         selectedJoke.setPunchline(fldPunchline.getText());
         selectedJoke.setCategory(fldCategory.getText());
+        selectedJoke.setDate_updated(); //updating date_updated everytime we update
         tableOfJokes.refresh();
     }
 }

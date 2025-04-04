@@ -60,6 +60,9 @@ public class Joke {
     public void setRating(String rating) {
         this.rating = rating;
     }
+    public void setDate_updated() {
+        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());;
+    }
 }
 
 
