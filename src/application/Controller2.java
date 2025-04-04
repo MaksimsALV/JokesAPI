@@ -63,6 +63,8 @@ public class Controller2 {
     }
 
     public void initialize() { //FXMLLoader automatically calls this method when launching 2nd scene
+        sliderRating.disableProperty().bind(tableOfJokes.getSelectionModel().selectedItemProperty().isNull()); //disabling slider unless row is selected; this helps with rating only selected joke
+
         clmnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         clmnJoke.setCellValueFactory(new PropertyValueFactory<>("joke"));
         clmnPunchline.setCellValueFactory(new PropertyValueFactory<>("punchline"));
