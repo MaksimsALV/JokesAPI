@@ -6,7 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.io.IOException;
 
 public class Controller2 {
 
@@ -34,6 +37,17 @@ public class Controller2 {
     @FXML
     private TableColumn<Joke, String> clmnDate_updated; //todo change to timestamp
 
+    @FXML
+    private Button btnAddNewJoke;
+
+    @FXML
+    private TextField fldCategory;
+
+    @FXML
+    private TextField fldJoke;
+
+    @FXML
+    private TextField fldPunchline;
 
     @FXML
     private Button btnReturn;
@@ -57,6 +71,15 @@ public class Controller2 {
 
     public static void addJoke(Joke joke) {
         listOfJokes.add(joke);
+    }
+
+    public void btnAddNewJoke() {
+        String joke = fldJoke.getText();
+        String punchline = fldPunchline.getText();
+        String category = fldCategory.getText();
+
+        Joke addNewJoke = new Joke(joke, punchline, category);
+        listOfJokes.add(addNewJoke);
     }
 
 }

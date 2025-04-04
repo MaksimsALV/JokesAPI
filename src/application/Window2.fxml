@@ -29,11 +29,11 @@
                               <TableColumn fx:id="clmnDate_updated" prefWidth="146.0" text="date_updated" />
                           </columns>
                         </TableView>
-                        <Button layoutX="226.0" layoutY="316.0" mnemonicParsing="false" text="Add" />
+                        <Button fx:id="btnAddNewJoke" layoutX="226.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnAddNewJoke" text="Add" />
                         <Button layoutX="1146.0" layoutY="303.0" mnemonicParsing="false" text="Delete" />
-                        <TextField layoutX="408.0" layoutY="303.0" prefHeight="25.0" prefWidth="396.0" promptText="joke" />
-                        <TextField layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
-                        <TextField layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
+                        <TextField fx:id="fldJoke" layoutX="408.0" layoutY="303.0" prefHeight="25.0" prefWidth="396.0" promptText="joke" />
+                        <TextField fx:id="fldPunchline" layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
+                        <TextField fx:id="fldCategory" layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
                         <Button layoutX="226.0" layoutY="378.0" mnemonicParsing="false" text="Update" />
                         <Slider layoutX="410.0" layoutY="446.0" majorTickUnit="1.0" max="5.0" minorTickCount="1" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" />
                         <Text layoutX="410.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
