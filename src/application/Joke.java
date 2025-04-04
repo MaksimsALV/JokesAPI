@@ -1,5 +1,4 @@
 package application;
-import API.JokesAPI;
 
 import java.text.SimpleDateFormat;
 import java.util.Date; //javas timestamps
@@ -15,20 +14,39 @@ public class Joke {
     private String date_updated;
     private String date_deleted;
 
-
     public Joke(String joke, String punchline, String category) {
         setId();
-        //this.id = UUID.randomUUID();
         setJoke(joke);
-        //this.joke = joke;
         setPunchline(punchline);
-        //this.punchline = punchline;
         setCategory(category);
-        //this.category = category;
         setDate_created();
-        //this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
         setDate_updated();
-        //this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    }
+
+    //setters
+    public void setId() {
+        this.id = UUID.randomUUID();
+    }
+    public void setJoke(String joke) {
+        this.joke = joke;
+    }
+    public void setPunchline(String punchline) {
+        this.punchline = punchline;
+    }
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+    public void setDate_created() {
+        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    }
+    public void setDate_updated() {
+        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    }
+    public void setDate_deleted() {
+        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
 
     //getters
@@ -56,32 +74,6 @@ public class Joke {
     }
     public String getDate_deleted() {
         return date_deleted;
-    }
-
-    //setters
-    public void setId() {
-        this.id = UUID.randomUUID();
-    }
-    public void setJoke(String joke) {
-        this.joke = joke;
-    }
-    public void setPunchline(String punchline) {
-        this.punchline = punchline;
-    }
-    public void setCategory(String category) {
-        this.category = category;
-    }
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
-    public void setDate_created() {
-        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
-    }
-    public void setDate_updated() {
-        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
-    }
-    public void setDate_deleted() {
-        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
 }
 
