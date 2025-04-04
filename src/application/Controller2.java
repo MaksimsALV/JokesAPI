@@ -88,7 +88,7 @@ public class Controller2 {
 
     public void btnRateJoke() {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
-        int slider = (int) sliderRating.getValue();
+        String slider = String.format("%.0f", sliderRating.getValue());
         selectedJoke.setRating(slider);
         tableOfJokes.refresh();
     }

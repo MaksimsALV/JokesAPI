@@ -35,7 +35,7 @@
                         <TextField fx:id="fldPunchline" layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
                         <TextField fx:id="fldCategory" layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
                         <Button layoutX="226.0" layoutY="378.0" mnemonicParsing="false" text="Update" />
-                        <Slider fx:id="sliderRating" layoutX="410.0" layoutY="446.0" majorTickUnit="1.0" max="5.0" minorTickCount="1" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" />
+                        <Slider fx:id="sliderRating" layoutX="410.0" layoutY="446.0" majorTickUnit="1.0" max="5.0" minorTickCount="0" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
                         <Text layoutX="410.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
                         <Button fx:id="btnRateJoke" layoutX="226.0" layoutY="433.0" mnemonicParsing="false" onAction="#btnRateJoke" text="Rate" />
                      </children>
