@@ -30,7 +30,7 @@
                           </columns>
                         </TableView>
                         <Button fx:id="btnAddNewJoke" layoutX="226.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnAddNewJoke" text="Add" />
-                        <Button layoutX="1146.0" layoutY="303.0" mnemonicParsing="false" text="Delete" />
+                        <Button fx:id="btnDeleteJoke" layoutX="1146.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnDeleteJoke" text="Delete" />
                         <TextField fx:id="fldJoke" layoutX="408.0" layoutY="303.0" prefHeight="25.0" prefWidth="396.0" promptText="joke" />
                         <TextField fx:id="fldPunchline" layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
                         <TextField fx:id="fldCategory" layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
@@ -42,19 +42,18 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Archieve">
+          <Tab text="Archive">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="282.0" prefWidth="689.0">
+                        <TableView fx:id="tableOfJokes_deleted" prefHeight="295.0" prefWidth="1211.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="id" />
-                              <TableColumn prefWidth="75.0" text="joke" />
-                              <TableColumn prefWidth="75.0" text="punchline" />
-                              <TableColumn prefWidth="75.0" text="category" />
-                              <TableColumn prefWidth="75.0" text="rating" />
-                              <TableColumn prefWidth="113.0" text="date_created" />
-                              <TableColumn prefWidth="94.0" text="date_updated" />
+                              <TableColumn fx:id="clmnId_deleted" prefWidth="241.0" text="id" />
+                              <TableColumn fx:id="clmnJoke_deleted" minWidth="0.0" prefWidth="282.0" text="joke" />
+                              <TableColumn fx:id="clmnPunchline_deleted" prefWidth="242.0" text="punchline" />
+                              <TableColumn fx:id="clmnCategory_deleted" prefWidth="67.0" text="category" />
+                              <TableColumn fx:id="clmnRating_deleted" prefWidth="54.0" text="rating" />
+                              <TableColumn fx:id="clmnDate_deleted_deleted" prefWidth="324.0" text="date_deleted" />
                            </columns>
                         </TableView>
                      </children>

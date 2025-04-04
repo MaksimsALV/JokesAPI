@@ -13,6 +13,7 @@ public class Joke {
     private String rating;
     private String date_created;
     private String date_updated;
+    private String date_deleted;
 
 
     public Joke(String joke, String punchline, String category) {
@@ -46,6 +47,9 @@ public class Joke {
     public String getDate_updated() {
         return date_updated;
     }
+    public String getDate_deleted() {
+        return date_deleted;
+    }
 
     //setters
     public void setJoke(String joke) {
@@ -62,6 +66,9 @@ public class Joke {
     }
     public void setDate_updated() {
         this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());;
+    }
+    public void setDate_deleted() {
+        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());;
     }
 }
 
