@@ -4,7 +4,6 @@ import API.JokesAPI;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
@@ -30,10 +29,8 @@ public class Controller1 {
         fieldJoke.setText(visibleJoke.getJoke() + "\n" + visibleJoke.getPunchline());
     }
 
-    //initialize writing to the table
     public void btnSave() {
         Controller2.addJoke(visibleJoke);
-
     }
 
     public void openStage2() {
