@@ -17,15 +17,22 @@ public class Joke {
 
 
     public Joke(String joke, String punchline, String category) {
-        this.id = UUID.randomUUID();
-        this.joke = joke;
-        this.punchline = punchline;
-        this.category = category;
-        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
-        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+        setId();
+        //this.id = UUID.randomUUID();
+        setJoke(joke);
+        //this.joke = joke;
+        setPunchline(punchline);
+        //this.punchline = punchline;
+        setCategory(category);
+        //this.category = category;
+        setDate_created();
+        //this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+        setDate_updated();
+        //this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
 
     //getters
+    //its weird, javaFX needs them to work, but there is no usages for some of them...
     public UUID getId() {
         return id;
     }
@@ -52,6 +59,9 @@ public class Joke {
     }
 
     //setters
+    public void setId() {
+        this.id = UUID.randomUUID();
+    }
     public void setJoke(String joke) {
         this.joke = joke;
     }
@@ -64,11 +74,14 @@ public class Joke {
     public void setRating(String rating) {
         this.rating = rating;
     }
+    public void setDate_created() {
+        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    }
     public void setDate_updated() {
-        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());;
+        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
     public void setDate_deleted() {
-        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());;
+        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
 }
 

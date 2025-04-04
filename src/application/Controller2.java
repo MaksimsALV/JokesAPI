@@ -106,7 +106,7 @@ public class Controller2 {
         clmnPunchline_deleted.setCellValueFactory(new PropertyValueFactory<>("punchline"));
         clmnCategory_deleted.setCellValueFactory(new PropertyValueFactory<>("category"));
         clmnDate_deleted_deleted.setCellValueFactory(new PropertyValueFactory<>("date_deleted"));
-        clmnRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        clmnRating_deleted.setCellValueFactory(new PropertyValueFactory<>("rating"));
         tableOfJokes_deleted.setItems(listOfJokes_deleted);
     }
 
