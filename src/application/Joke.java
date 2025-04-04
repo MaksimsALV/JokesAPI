@@ -10,7 +10,7 @@ public class Joke {
     private String joke;
     private String punchline;
     private String category;
-    //private String rating; //todo change to integer
+    private int rating;
     private String date_created;
     private String date_updated;
 
@@ -23,6 +23,8 @@ public class Joke {
         this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
         this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
     }
+
+    //getters
     public UUID getId() {
         return id;
     }
@@ -35,11 +37,19 @@ public class Joke {
     public String getCategory() {
         return category;
     }
+    public int getRating() {
+        return rating;
+    }
     public String getDate_created() {
         return date_created;
     }
     public String getDate_updated() {
         return date_updated;
+    }
+
+    //setters
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 }
 

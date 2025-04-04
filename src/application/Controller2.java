@@ -38,6 +38,9 @@ public class Controller2 {
     private Button btnAddNewJoke;
 
     @FXML
+    private Button btnRateJoke;
+
+    @FXML
     private TextField fldCategory;
 
     @FXML
@@ -66,6 +69,7 @@ public class Controller2 {
         clmnCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
         clmnDate_created.setCellValueFactory(new PropertyValueFactory<>("date_created"));
         clmnDate_updated.setCellValueFactory(new PropertyValueFactory<>("date_updated"));
+        clmnRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
         tableOfJokes.setItems(listOfJokes);
     }
 
@@ -82,4 +86,10 @@ public class Controller2 {
         listOfJokes.add(addNewJoke);
     }
 
+    public void btnRateJoke() {
+        Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
+        int slider = (int) sliderRating.getValue();
+        selectedJoke.setRating(slider);
+        tableOfJokes.refresh();
+    }
 }
