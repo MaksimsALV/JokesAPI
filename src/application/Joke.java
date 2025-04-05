@@ -15,7 +15,7 @@ public class Joke {
     private Date date_deleted;
 
     public Joke(String joke, String punchline, String category) {
-        setId();
+        setId(UUID.randomUUID());
         setJoke(joke);
         setPunchline(punchline);
         setCategory(category);
@@ -25,8 +25,8 @@ public class Joke {
     }
 
     //setters
-    public void setId() {
-        this.id = UUID.randomUUID();
+    public void setId(UUID uuid) {
+        this.id = uuid;
     }
     public void setJoke(String joke) {
         this.joke = joke;
