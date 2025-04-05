@@ -121,6 +121,9 @@ public class Controller2 {
 
         Joke addNewJoke = new Joke(joke, punchline, category);
         listOfJokes.add(addNewJoke);
+        fldJoke.clear();
+        fldPunchline.clear();
+        fldCategory.clear();
     }
 
     public void btnRateJoke() {
@@ -137,6 +140,9 @@ public class Controller2 {
         selectedJoke.setPunchline(fldPunchline.getText());
         selectedJoke.setCategory(fldCategory.getText());
         selectedJoke.setDate_updated(new Date()); //updating date_updated everytime we update
+        fldJoke.clear();
+        fldPunchline.clear();
+        fldCategory.clear();
         tableOfJokes.refresh();
     }
 

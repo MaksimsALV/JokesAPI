@@ -29,15 +29,18 @@
                               <TableColumn fx:id="clmnDate_updated" prefWidth="146.0" text="date_updated" />
                           </columns>
                         </TableView>
-                        <Button fx:id="btnAddNewJoke" layoutX="226.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnAddNewJoke" text="Add" />
-                        <Button fx:id="btnDeleteJoke" layoutX="1146.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnDeleteJoke" text="Delete" />
-                        <TextField fx:id="fldJoke" layoutX="408.0" layoutY="303.0" prefHeight="25.0" prefWidth="396.0" promptText="joke" />
-                        <TextField fx:id="fldPunchline" layoutX="408.0" layoutY="340.0" prefHeight="25.0" prefWidth="396.0" promptText="punchline" />
-                        <TextField fx:id="fldCategory" layoutX="408.0" layoutY="378.0" prefHeight="25.0" prefWidth="394.0" promptText="category" />
-                        <Button fx:id="btnUpdateJoke" layoutX="226.0" layoutY="378.0" mnemonicParsing="false" onAction="#btnUpdateJoke" text="Update" />
-                        <Slider fx:id="sliderRating" layoutX="410.0" layoutY="446.0" majorTickUnit="1.0" max="5.0" minorTickCount="0" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-                        <Text layoutX="410.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate the joke!" />
-                        <Button fx:id="btnRateJoke" layoutX="226.0" layoutY="433.0" mnemonicParsing="false" onAction="#btnRateJoke" text="Rate" />
+                        <Button fx:id="btnAddNewJoke" layoutX="21.0" layoutY="484.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnAddNewJoke" text="Add" />
+                        <Button fx:id="btnDeleteJoke" layoutX="406.0" layoutY="484.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnDeleteJoke" text="Delete" />
+                        <TextField fx:id="fldJoke" layoutX="111.0" layoutY="316.0" prefHeight="25.0" prefWidth="396.0" promptText="Knock, knock..." />
+                        <TextField fx:id="fldPunchline" layoutX="111.0" layoutY="352.0" prefHeight="25.0" prefWidth="396.0" promptText="Woof!" />
+                        <TextField fx:id="fldCategory" layoutX="112.0" layoutY="390.0" prefHeight="25.0" prefWidth="394.0" promptText="Boomer jokes" />
+                        <Button fx:id="btnUpdateJoke" layoutX="146.0" layoutY="484.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnUpdateJoke" text="Update" />
+                        <Slider fx:id="sliderRating" layoutX="113.0" layoutY="432.0" majorTickUnit="1.0" max="5.0" minorTickCount="0" prefHeight="38.0" prefWidth="393.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                        <Text layoutX="20.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating" />
+                        <Button fx:id="btnRateJoke" layoutX="275.0" layoutY="484.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnRateJoke" text="Rate" />
+                        <Text layoutX="20.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joke:" />
+                        <Text layoutX="20.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punchline:" />
+                        <Text layoutX="20.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:" />
                      </children>
                   </AnchorPane>
             </content>

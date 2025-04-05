@@ -4,11 +4,11 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller1">
    <children>
-      <Button fx:id="btnGetJoke" layoutX="9.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnGetJoke" text="Get Joke" />
-      <TextArea fx:id="fieldJoke" editable="false" layoutX="9.0" layoutY="14.0" prefHeight="101.0" prefWidth="327.0" />
-      <Button fx:id="btnSave" layoutX="132.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnSave" text="Save" />
-      <Button fx:id="btnViewSavedJokes" layoutX="227.0" layoutY="121.0" mnemonicParsing="false" onAction="#openStage2" text="View Saved Jokes" />
+      <Button fx:id="btnGetJoke" layoutX="9.0" layoutY="121.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnGetJoke" text="Get Joke" />
+      <TextArea fx:id="fieldJoke" editable="false" layoutX="9.0" layoutY="14.0" prefHeight="101.0" prefWidth="336.0" />
+      <Button fx:id="btnSave" focusTraversable="false" layoutX="123.0" layoutY="121.0" minWidth="100.0" mnemonicParsing="false" onAction="#btnSave" text="Save" />
+      <Button fx:id="btnViewSavedJokes" focusTraversable="false" layoutX="236.0" layoutY="121.0" minWidth="100.0" mnemonicParsing="false" onAction="#openStage2" text="View Saved Jokes" />
    </children>
 </AnchorPane>
