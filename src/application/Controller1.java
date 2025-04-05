@@ -1,12 +1,14 @@
 package application;
 
 import API.JokesAPI;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.util.Duration;
 
 import java.io.IOException;
-
 
 public class Controller1 {
 
@@ -31,6 +33,12 @@ public class Controller1 {
 
     public void btnSave() {
         Controller2.addJoke(visibleJoke);
+        btnSave.setDisable(true);
+        btnSave.setText("Saving...");
+        new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            btnSave.setDisable(false);
+            btnSave.setText("Save");
+        })).play();
     }
 
     public void openStage2() {
