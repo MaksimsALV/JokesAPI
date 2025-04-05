@@ -21,7 +21,6 @@ public class Joke {
         setCategory(category);
         setDate_created(new Date());
         setDate_updated(new Date());
-        setDate_deleted(new Date());
     }
 
     //setters
