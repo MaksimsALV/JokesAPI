@@ -24,8 +24,8 @@
                           <columns>
                             <TableColumn fx:id="clmnId" prefWidth="241.0" text="id" />
                             <TableColumn fx:id="clmnJoke" minWidth="0.0" prefWidth="282.0" text="joke" />
-                              <TableColumn fx:id="clmnPunchline" prefWidth="242.0" text="punchline" />
-                              <TableColumn fx:id="clmnCategory" prefWidth="67.0" text="category" />
+                              <TableColumn fx:id="clmnPunchline" prefWidth="230.0" text="punchline" />
+                              <TableColumn fx:id="clmnCategory" prefWidth="79.0" text="category" />
                               <TableColumn fx:id="clmnRating" prefWidth="54.0" text="rating" />
                               <TableColumn fx:id="clmnDate_created" prefWidth="178.0" text="date_created" />
                               <TableColumn fx:id="clmnDate_updated" prefWidth="146.0" text="date_updated" />
@@ -65,8 +65,8 @@
                            <columns>
                               <TableColumn fx:id="clmnId_deleted" prefWidth="241.0" text="id" />
                               <TableColumn fx:id="clmnJoke_deleted" minWidth="0.0" prefWidth="282.0" text="joke" />
-                              <TableColumn fx:id="clmnPunchline_deleted" prefWidth="242.0" text="punchline" />
-                              <TableColumn fx:id="clmnCategory_deleted" prefWidth="67.0" text="category" />
+                              <TableColumn fx:id="clmnPunchline_deleted" prefWidth="232.0" text="punchline" />
+                              <TableColumn fx:id="clmnCategory_deleted" prefWidth="77.0" text="category" />
                               <TableColumn fx:id="clmnRating_deleted" prefWidth="54.0" text="rating" />
                               <TableColumn fx:id="clmnDate_deleted_deleted" prefWidth="324.0" text="date_deleted" />
                            </columns>
