@@ -10,17 +10,18 @@ public class Joke {
     private String punchline;
     private String category;
     private String rating;
-    private String date_created;
-    private String date_updated;
-    private String date_deleted;
+    private Date date_created;
+    private Date date_updated;
+    private Date date_deleted;
 
     public Joke(String joke, String punchline, String category) {
         setId();
         setJoke(joke);
         setPunchline(punchline);
         setCategory(category);
-        setDate_created();
-        setDate_updated();
+        setDate_created(new Date());
+        setDate_updated(new Date());
+        setDate_deleted(new Date());
     }
 
     //setters
@@ -39,18 +40,19 @@ public class Joke {
     public void setRating(String rating) {
         this.rating = rating;
     }
-    public void setDate_created() {
-        this.date_created = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    public void setDate_created(Date date) {
+        this.date_created = date;
     }
-    public void setDate_updated() {
-        this.date_updated = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    public void setDate_updated(Date date) {
+        this.date_updated = date;
     }
-    public void setDate_deleted() {
-        this.date_deleted = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(new Date());
+    public void setDate_deleted(Date date) {
+        this.date_deleted = date;
     }
 
     //getters
     //its weird, javaFX needs them to work, but there is no usages for some of them...
+    //internet told me that PropertyValueFactory in controller does that behind the scenes.
     public UUID getId() {
         return id;
     }
@@ -66,14 +68,14 @@ public class Joke {
     public String getRating() {
         return rating;
     }
-    public String getDate_created() {
-        return date_created;
+    public String getDate_created() { //the date it self is stored in Date format, but for UI i return it in human readable, formatted String
+        return new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(date_created);
     }
     public String getDate_updated() {
-        return date_updated;
+        return new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(date_updated);
     }
     public String getDate_deleted() {
-        return date_deleted;
+        return new SimpleDateFormat("dd-MM-yyyy HH:mm:ss.SSS").format(date_deleted);
     }
 }
 

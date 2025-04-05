@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.Date;
+
 public class Controller2 {
 
     @FXML
@@ -125,7 +127,7 @@ public class Controller2 {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
         String slider = String.format("%.0f", sliderRating.getValue()); //I tried integers and failed, so i went with Strings, and then just trimming values to one number
         selectedJoke.setRating(slider);
-        selectedJoke.setDate_updated(); //updating date_updated everytime we rate
+        selectedJoke.setDate_updated(new Date()); //updating date_updated everytime we rate
         tableOfJokes.refresh();
     }
 
@@ -134,14 +136,14 @@ public class Controller2 {
         selectedJoke.setJoke(fldJoke.getText());
         selectedJoke.setPunchline(fldPunchline.getText());
         selectedJoke.setCategory(fldCategory.getText());
-        selectedJoke.setDate_updated(); //updating date_updated everytime we update
+        selectedJoke.setDate_updated(new Date()); //updating date_updated everytime we update
         tableOfJokes.refresh();
     }
 
     public void btnDeleteJoke() {
         Joke selectedJoke = tableOfJokes.getSelectionModel().getSelectedItem();
         listOfJokes_deleted.add(selectedJoke);
-        selectedJoke.setDate_deleted();
+        selectedJoke.setDate_deleted(new Date());
         listOfJokes.remove(selectedJoke);
         tableOfJokes.refresh();
         tableOfJokes_deleted.refresh();
