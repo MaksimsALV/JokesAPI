@@ -17,7 +17,7 @@ public class Controller2 {
     private TableView<Joke> tableOfJokes_deleted;
 
     @FXML
-    private TableColumn<Joke, String> clmnId; //todo change to UUID
+    private TableColumn<Joke, String> clmnId;
 
     @FXML
     private TableColumn<Joke, String> clmnId_deleted;
@@ -41,16 +41,16 @@ public class Controller2 {
     private TableColumn<Joke, String> clmnCategory_deleted;
 
     @FXML
-    private TableColumn<Joke, String> clmnRating; //todo change to integer
+    private TableColumn<Joke, String> clmnRating;
 
     @FXML
-    private TableColumn<Joke, String> clmnRating_deleted; //todo change to integer
+    private TableColumn<Joke, String> clmnRating_deleted;
 
     @FXML
-    private TableColumn<Joke, String> clmnDate_created; //todo change to timestamp
+    private TableColumn<Joke, String> clmnDate_created;
 
     @FXML
-    private TableColumn<Joke, String> clmnDate_updated; //todo change to timestamp
+    private TableColumn<Joke, String> clmnDate_updated;
 
     @FXML
     private TableColumn<Joke, String> clmnDate_deleted_deleted;
